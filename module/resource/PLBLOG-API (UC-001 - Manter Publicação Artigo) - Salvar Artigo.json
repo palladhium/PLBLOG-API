@@ -1,0 +1,10 @@
+        {
+            "titulo": "Artigo 001 de 2020",
+            "conteudo": "Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim. Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim. Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim. Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim.Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim. Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim.",
+            "dataPublicacao": "14/06/2020",
+            "diaPublicacao": "14",
+            "numeroMesPublicacao": 6,
+            "mesPublicacao": "Junho",
+            "anoPublicacao": "2020",
+            "autor": "José Quintin"
+        }
