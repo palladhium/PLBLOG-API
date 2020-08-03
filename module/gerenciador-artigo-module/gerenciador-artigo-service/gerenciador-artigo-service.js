@@ -1,15 +1,25 @@
+var ArtigoModel = require("../gerenciador-artigo-model/gerenciador-artigo-model");
+
 var artigoList = [];
 var codigo = 0;
 
-var save = function(ArtigoModel) {
-    codigo++;
-    ArtigoModel.codigo = codigo;
-    artigoList.push(ArtigoModel);
+var persist = function(request, response) {
+    return ArtigoModel.create(request.body);
 }
 
-var findAll = function() {
-    return artigoList;
+var findOne = function(request, response) { }
+
+var findAll = function(recuperarArtigoModel, tratarErro) {
+    // ArtigoModel = PLBLOG.artigomodels
+    ArtigoModel.find().exec(function(ArtigoModel, error) {
+        if(!error) {
+            recuperarArtigoModel(ArtigoModel);
+        } else {
+            tratarErro(error);
+        }
+    });
 };
 
-exports.save = save;
+exports.persist = persist;
 exports.findAll = findAll;
+exports.findOne = findOne;

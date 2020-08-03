@@ -1,13 +1,18 @@
 var GerenciadorArtigoService = require("../gerenciador-artigo-service/gerenciador-artigo-service");
 
-var save = function(request, response) {
-    GerenciadorArtigoService.save(request.body);
-    response.status(201).json(request.body);
+var persist = function(request, response) {
+    GerenciadorArtigoService.persist(request);
+    console.log(request.body);
+    return response.status(201).json(request.body);
 }
 
 var findAll = function(request, response) {
-    return response.status(200).json(GerenciadorArtigoService.findAll());
+    GerenciadorArtigoService.findAll(function(ArtigoModel) {
+        return response.status(200).json(ArtigoModel);
+    }, function(error) {
+        return response.status(400).json(error);
+    });
 }
 
-exports.save = save;
+exports.persist = persist;
 exports.findAll = findAll;
